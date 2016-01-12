@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        h3. Lorem ipsum dolor sit amet.
+      </h3>
+      <blockquote>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+        </p> <small>Someone famous <cite>Source Title</cite></small>
+      </blockquote>
+      <form role="form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">
+            Email address
+          </label>
+          <input type="email" class="form-control" id="exampleInputEmail1" />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">
+            Password
+          </label>
+          <input type="password" class="form-control" id="exampleInputPassword1" />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">
+            File input
+          </label>
+          <input type="file" id="exampleInputFile" />
+          <p class="help-block">
+          Example block-level help text here.
+          </p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" /> Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">
+          Submit
+        </button>
+      </form>
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  #
+                </th>
+                <th>
+                 Nombr
+                </th>
+               </tr>
+            </thead>
+            <tbody>
+              {% for diagram in diagrams %}
+              <tr>
+                <td> {{diagram.id}} </td>
+                <td> {{diagram.nombre}} </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li>
+              <a href="#">Prev</a>
+            </li>
+            <li>
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a href="#">4</a>
+            </li>
+            <li>
+              <a href="#">5</a>
+            </li>
+            <li>
+              <a href="#">Next</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="jumbotron">
+            <h2>
+              Hello, world!
+            </h2>
+            <p>
+            This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+            </p>
+            <p>
+            <a class="btn btn-primary btn-large" href="#">Learn more</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
