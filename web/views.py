@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from web.models import *
-from django.http import JsonResponse, HttpResponseBadRequest, \
-    HttpResponseForbidden, HttpResponseNotFound, HttpResponse
+from django.http import JsonResponse, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound, HttpResponse
 from suds.xsd.doctor import ImportDoctor, Import
 from suds.client import Client
 # Create your views here.
@@ -38,7 +37,7 @@ def login(request):
 
 # Create your views here.
 def diagrams(request):
-    diagrams = Diagrama.objects.all()
+    diagrams = Diagramas.objects.all()
     return render(request,'home.html',{'diagrams':diagrams})
 
 def home(request):
